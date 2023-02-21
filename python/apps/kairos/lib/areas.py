@@ -92,16 +92,17 @@ def area_coordinates_as_dictionary(area_lists):
             areas_as_dictionary.update({area_name: coordinates})
     return areas_as_dictionary
 
+
 ############### Ejemplo de como ejecutar el codigo para determinar si los
 ############### rectangulos generados por las lineas de referencias se tocan 
 ############### en algun punto
+'''
 reference_lines = {
         "a": [(40,100),(300,30)],
         "b": [(400,100),(900,300)],
         "c": [(540,400),(1300,600)]
         }
 
-'''
 #En base a las lineas de referencia genera las coordenadas de 
 #los rectangulos donde los puntos siempre estan en este orden:
 
@@ -112,11 +113,11 @@ reference_lines = {
     p4---------p3
 
 '''
-areas = generate_rectangle_based_on_reference_line(reference_lines)
+#areas = generate_rectangle_based_on_reference_line(reference_lines)
 '''
 Almacenamos las coordenadas de las areas como dictionarios para poder referirlas por name
 '''
-areas_as_dictionary = area_coordinates_as_dictionary(areas)
+#areas_as_dictionary = area_coordinates_as_dictionary(areas)
 '''
 verifica que las areas no se toquen en ningun punto entre si
 '''
@@ -125,5 +126,6 @@ verifica que las areas no se toquen en ningun punto entre si
 #else:
 #    print('Error --- alguna de las areas se toca con la otra')
 
-
+#xmins, ymins, xmaxs, ymaxs = get_mins_maxs_from_list(areas_as_dictionary)
+#print(xmins, ymins, xmaxs, ymaxs)
 
